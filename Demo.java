@@ -58,6 +58,11 @@ public class Demo {
 		for(InventoryItem item : allItems) {
 			System.out.println(item.getName());
 		}
+<<<<<<< HEAD
+=======
+		
+		System.out.printl("From git repo");
+>>>>>>> timjava/working
 	}
 
 }
