@@ -58,6 +58,8 @@ public class Demo {
 		for(InventoryItem item : allItems) {
 			System.out.println(item.getName());
 		}
+		
+		System.out.printl("From git repo");
 	}
 
 }
