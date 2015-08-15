@@ -61,7 +61,36 @@ public class Demo {
 
 		
 		System.out.println("From git repo");
+		
+		Enemy enemy = new Enemy(10,3);
+		System.out.println("Hitpoints: " + enemy.getHitPoints()+ " Lives: "+enemy.getLives());
+		enemy.takeDamage(3);
+		System.out.println("Hitpoints: " + enemy.getHitPoints()+ " Lives: "+enemy.getLives());
 
+		Soldier soldier = new Soldier(25,1);
+		System.out.println("Hitpoints: " + soldier.getHitPoints()+ " Lives: "+soldier.getLives());
+		soldier.takeDamage(4);
+		System.out.println("Hitpoints: " + soldier.getHitPoints()+ " Lives: "+soldier.getLives());
+		
+		SuperSoldier superSoldier = new SuperSoldier(50, 1);
+		System.out.println("Hitpoints: " + superSoldier.getHitPoints()+ " Lives: "+superSoldier.getLives());
+		superSoldier.takeDamage(4);
+		System.out.println("Hitpoints: " + superSoldier.getHitPoints()+ " Lives: "+superSoldier.getLives());
+		soldier.takeDamage(4);
+		System.out.println("Hitpoints: " + soldier.getHitPoints()+ " Lives: "+soldier.getLives());
+		
+		float theDamage = 9.0f;
+		superSoldier.takeDamage(theDamage);
+		
+		int [] element = {5,8,7,11,2,4,6};
+		int indexPos = 0;
+		int sumTotal = 0;
+		while(indexPos<element.length) {
+			System.out.println("Processing: "+indexPos);
+			sumTotal = sumTotal + element[indexPos];
+			indexPos += 1;
+		}
+		System.out.println("SumTotal was = "+sumTotal);
 	}
 
 }
