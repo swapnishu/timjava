@@ -82,13 +82,41 @@ public class Demo {
 		float theDamage = 9.0f;
 		superSoldier.takeDamage(theDamage);
 		
-		int [] element = {5,8,7,11,2,4,6};
-		int indexPos = 0;
+		int [] element = {5,8,7,111,11,-1,2,4,6};
+		
 		int sumTotal = 0;
-		while(indexPos<element.length) {
+		//while(indexPos<element.length) {
+		for(int indexPos = 0;indexPos < element.length;indexPos++) {
 			System.out.println("Processing: "+indexPos);
+			if(element[indexPos] < 0){
+				System.out.println("Break");
+				break;
+			}
+			if(element[indexPos] > 99) {
+				System.out.println("Continue");
+				//indexPos += 1;
+				continue;
+			}
 			sumTotal = sumTotal + element[indexPos];
-			indexPos += 1;
+			//indexPos += 1;
+		}
+		System.out.println("SumTotal was = "+sumTotal);
+		
+		//foreach example
+		sumTotal = 0;
+		for(int elementContent: element) {
+			System.out.println("Processing: "+ elementContent);
+			if(elementContent < 0){
+				System.out.println("Break");
+				break;
+			}
+			if(elementContent > 99) {
+				System.out.println("Continue");
+				//indexPos += 1;
+				continue;
+			}
+			sumTotal = sumTotal + elementContent;
+			//indexPos += 1;
 		}
 		System.out.println("SumTotal was = "+sumTotal);
 	}
